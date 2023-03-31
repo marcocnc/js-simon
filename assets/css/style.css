@@ -23,11 +23,29 @@ body{
     text-align: center;
 }
 
-.container h1{
+.numbersRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.numbersRow h2{
+    padding: 0 70px;
+}
+
+.container h1, h2{
     margin-bottom: 20px;
 }
 
-.btn{
+input{
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.btn,
+.btn-go{
     padding: 15px 25px;
     font-size: 20px;
     font-family:'Orbitron', sans-serif;
@@ -39,11 +57,18 @@ body{
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover,
+.btn-go:hover{
     background-color: #7a4e1c;
 }
 
-.btn:active{
+.btn:active,
+.btn-go:active{
     transform: scale(1.2);
     transition: all 0.15s;
+}
+
+
+.d-none{
+    display: none;
 }

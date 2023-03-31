@@ -3,7 +3,7 @@ const btnStart = document.querySelector('.btn');
 const arrNumbers = [];
 const numbersRow = document.querySelector('.numbersRow');
 const btnGo = document.querySelector('.btn-go');
-const userChoice = document.querySelector('#userChoice');
+let userChoice = document.querySelector('#userChoice').value;
 let simonSays = document.querySelector('h1');
 
 btnStart.addEventListener('click', play);
@@ -40,16 +40,21 @@ function play(){
 }
 
 function userTurn(){
-    let userNum = userChoice.value;
-    let arrUserNum = userNum.split(',')
-    console.log(arrUserNum);
-    if(arrNumbers === arrUserNum){
-        console.log('hai vintoooo');
-    }else{
-        console.log('hai persoooo');
     
-    }
-    return arrUserNum;
+    
+    console.error(userChoice);
+    let endGame = document.getElementById('endGame');
+    console.log(userChoice, arrNumbers);
+    for(let i = 1; i <= arrNumbers.length; i++) {
+        // confronta il valore dell'elemento corrispondente dei due array
+        if(arrNumbers[i] === userChoice[i]) {
+          console.log("L'elemento " + i + " dei due array è uguale: " + arrNumbers[i]);
+        } else {
+          console.log("L'elemento " + i + " dei due array è diverso: " + arrNumbers[i] + " != " + userChoice[i]);
+        }
+      }
+      
+    return userChoice;
 }
 
 
@@ -84,7 +89,8 @@ function disappear(){
 }
 
 function appear(){
+    const inputUser = document.querySelector('#userChoice');
     btnGo.classList.remove('d-none');
-    userChoice.classList.remove('d-none');
+    inputUser.classList.remove('d-none');
     simonSays.innerHTML = '... and you?';
 }

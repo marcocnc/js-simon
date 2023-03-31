@@ -6,5 +6,5 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 
 ## Procedimento
 1. Creare un array vuoto in cui si inseriranno i 5 numeri casuali;
-2. Math random di numeri compresi tra 1 e 10 per 5 volte;
+2. Funzione Math random di numeri compresi tra 1 e 10 per 5 volte;
 3. A questo punto i numeri casuali verranno inseriti nell'array vuoto
